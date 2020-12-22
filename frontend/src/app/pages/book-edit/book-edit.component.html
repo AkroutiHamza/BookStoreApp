@@ -1,0 +1,115 @@
+<h1 align="center" class="display-4 mb-5">Edit Book</h1>
+<div style="width:40%; margin: 25px auto">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <!--Id-->
+        <div class="form-group">
+            <label for="BookId">Code</label>
+            <input [readOnly]="isEdit" [disabled]="isEdit" [(ngModel)]="Book.BookId" type="text"
+                   class="form-control form-control-lg" #BookIdInput
+                   id="BookId" name="BookId" required #BookId="ngModel">
+            <div *ngIf="BookIdInput.invalid && (BookIdInput.dirty ||BookIdInput.touched)">
+                <div *ngIf="BookIdInput.errors.required">
+                    ISBN is required.
+                </div>
+            </div>
+        </div>
+        <!--Photo-->
+        <div class="form-group">
+            <label>Photo Link</label>
+            <input [(ngModel)]="Book.BookIcon" type="text" class="form-control form-control-lg" id="BookIcon"
+                   name="BookIcon" placeholder="Photo">
+        </div>
+
+        <!--Name-->
+        <div class="form-group">
+            <label>title</label>
+            <input [(ngModel)]="Book.title" type="text" class="form-control form-control-lg" id="title"
+                   #title="ngModel"
+                   name="title" placeholder="Name" required>
+        </div>
+        <div *ngIf="title.invalid && (title.dirty ||title.touched)">
+            <div *ngIf="title.errors.required">
+                Name is required.
+            </div>
+        </div>
+
+        <!--Description-->
+        <div class="form-group">
+            <label>author</label>
+            <textarea class="form-control form-control-lg text-left"
+                      id="author" name="author"
+                      placeholder="write author here " [(ngModel)]="Book.author"></textarea>
+        </div>
+        <!--Price-->
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input class="form-control form-control-lg"
+                   type="number"
+                   id="price"
+                   name="price"
+                   #price="ngModel"
+                   [ngModel]="Book.price" (ngModelChange)="Book.price=$event"
+                   required>
+            <div *ngIf="price.invalid && (price.dirty ||price.touched)">
+                <div *ngIf="price.errors.required">
+                    Price is required.
+                </div>
+            </div>
+        </div>
+        <!--Stock-->
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input class="form-control form-control-lg"
+                   type="number"
+                   id="stock"
+                   name="stock"
+                   min="0" #stock="ngModel"
+                   [(ngModel)]="stock"
+                   required>
+            <div *ngIf="stock.invalid && (stock.dirty ||stock.touched)">
+                <div *ngIf="stock.errors.required">
+                    Stock is required.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="releaseDate">releaseDate</label>
+            <input class="form-control form-control-lg"
+                   id="releaseDate"
+                   name="releaseDate"
+                   min="0" #releaseDate="ngModel"
+                   [(ngModel)]="releaseDate"
+                   required>
+            <div *ngIf="releaseDate.invalid && (releaseDate.dirty ||releaseDate.touched)">
+                <div *ngIf="releaseDate.errors.required">
+                    Stock is required.
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+        <!--Status-->
+        <div class="form-group">
+            <label for="BookStatus">Status</label>
+            <select class="custom-select custom-select-lg " id="BookStatus" name="BookStatus" required
+                    [(ngModel)]="Book.BookStatus">
+                <option [ngValue]=0>Available</option>
+                <option [ngValue]=1>Unavailable</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="!form.form.valid" class="btn btn-lg btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+
+
+</div>

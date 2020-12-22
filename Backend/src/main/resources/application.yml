@@ -29,4 +29,7 @@ spring:
         #port: 8081
   servlet:
     contextPath: /api
- 
+
+
+  jwtSecret: vermeg.employee:hamza
+  jwtExpiration: 86400

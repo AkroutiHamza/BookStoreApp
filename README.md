@@ -4,20 +4,41 @@
 
  
 
-### Screenshots
+## Screenshots
 
-
-#### 1-Bookspage:
-![booksimage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/books.png?raw=true)
-
-
-#### 2-Loginpage:
-![loginpage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/signup.png?raw=true)
+### CustomerPages:
 
 
 
 #### 3-Cartpage:
 ![Cartpage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/cart.png?raw=true)
+
+
+
+#### 2-Loginpage:
+![loginpage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/signup.png?raw=true)
+
+#### 1-Bookspage:
+![Bookspage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/books.png?raw=true)
+
+
+### Employee & Manager pages :
+
+
+#### 1-editprofilepage:
+![editprofilepage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/editprofile.png?raw=true)
+
+#### 2-Orderspage:
+![Orderspage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/orders.png?raw=true)
+
+#### 3-editbookpage:
+![editbookpage](https://github.com/AkroutiHamza/BookStoreApp/blob/main/Screenshots/bookedit.png?raw=true)
+
+
+
+
+
+
 
 
 

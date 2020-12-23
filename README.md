@@ -103,4 +103,3 @@ ng build --prod
 docker-compose up --build
 ```
 
-## Notice : !!!!!!! Tests will be added soon !!!!!!!!!

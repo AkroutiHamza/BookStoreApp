@@ -1,4 +1,4 @@
-package me.zhulin.shopapi.api;
+package com.bookstore.api;
 
 import org.junit.Test;
 
@@ -26,11 +26,27 @@ public class CartControllerTest {
 
 
     @Test
-    public void getCart() {
+    public void getCart() throws Exception {
+
+    given(userService.findOne("Customer1")).willReturn(data);
+
+    mockMvc.perform(get('/cart/')).contentType(MediaType.APPLICATION_JSON)
+    .andExpect(Status().isok())
+    .andExpect(jsonPath("$", hasSize(1))));
+
+    }
 
 
 
 
+    @Test
+    public void checkout() throws Exception {
 
+    given(userService.findOne("Customer1")).willReturn(data);
+
+    mockMvc.perform(get('/cart/checkout')).contentType(MediaType.APPLICATION_JSON)
+    .andExpect(Status().isok())
+    .andExpect(jsonPath("$", hasSize(1))));
+    
     }
 }

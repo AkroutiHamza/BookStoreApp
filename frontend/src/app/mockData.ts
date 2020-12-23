@@ -21,7 +21,7 @@ export const books: Book[] = [
     price: 5.00,
     BookIcon:'  https://m.media-amazon.com/images/I/41O9PaBrQ2L._SY346_.jpg',
     releaseDate: '2017-04-10',
-    stock: 17,
+    stock: 0,
     bookStatus:1
 
 
